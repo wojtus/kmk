@@ -1,9 +1,10 @@
 package spectrum.kmk.service;
 
-import java.util.List;
+import java.util.Collection;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.Executor;
 import java.util.function.Consumer;
+import java.util.function.Supplier;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,9 +16,7 @@ import spectrum.kmk.persistence.FixtureRepository;
 import spectrum.kmk.persistence.TeamBo;
 import spectrum.kmk.persistence.TeamRepository;
 import spectrum.kmk.source.FixtureImportDto;
-import spectrum.kmk.source.FixtureReaderTest;
 import spectrum.kmk.source.TeamImportDto;
-import spectrum.kmk.source.TeamReaderTest;
 
 @Service
 public class DataImportService {
@@ -37,21 +36,19 @@ public class DataImportService {
 		this.fixtureRepository = fixtureRepository;
 	}
 
-	void importData() throws Exception {
-		final Consumer<List<TeamImportDto>> importEachTeam = teamDtos -> teamDtos.forEach(this::importTeam);
-		final Consumer<List<FixtureImportDto>> importEachFixture = fixtureDtos -> fixtureDtos
+	void importData(final Supplier<Collection<TeamImportDto>> teams,
+			final Supplier<Collection<FixtureImportDto>> fixtures) throws Exception {
+		final Consumer<Collection<TeamImportDto>> importEachTeam = teamDtos -> teamDtos.forEach(this::importTeam);
+		final Consumer<Collection<FixtureImportDto>> importEachFixture = fixtureDtos -> fixtureDtos
 				.forEach(this::importFixture);
 		CompletableFuture.//
-				supplyAsync(TeamReaderTest::getTestTeams, executor).//
+				supplyAsync(teams, executor).//
 				thenAccept(importEachTeam).//
-				thenApply(this::getTestFixturesFromVoid).//
+				join();
+		CompletableFuture.//
+				supplyAsync(fixtures, executor).//
 				thenAccept(importEachFixture).//
 				join();
-	}
-
-	private List<FixtureImportDto> getTestFixturesFromVoid(final Void v) {
-		return FixtureReaderTest.getTestFixtures();
-
 	}
 
 	private void importFixture(final FixtureImportDto fixtureImportDto) {

@@ -14,6 +14,8 @@ import spectrum.kmk.Application;
 import spectrum.kmk.persistence.FixtureRepository;
 import spectrum.kmk.persistence.TeamBo;
 import spectrum.kmk.persistence.TeamRepository;
+import spectrum.kmk.source.FixtureReaderTest;
+import spectrum.kmk.source.TeamReaderTest;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = { Application.class })
@@ -29,7 +31,7 @@ public class DataImportServiceTest {
 	@Test
 	public void testImportData() throws Exception {
 
-		importService.importData();
+		importService.importData(TeamReaderTest::getTestTeams, FixtureReaderTest::getTestFixtures);
 		assertEquals(18, teamRepository.count());
 		assertEquals(306, fixtureRepository.count());
 
