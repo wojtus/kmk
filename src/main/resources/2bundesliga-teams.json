@@ -1,0 +1,486 @@
+{
+	"_links": 
+	{
+		"self": 
+		{
+			"href": "http://api.football-data.org/v1/soccerseasons/395/fixtures"
+		},
+
+		"soccerseason": 
+		{
+			"href": "http://api.football-data.org/v1/soccerseasons/395"
+		}
+	},
+
+	"count": 18,
+	"teams": 
+	[
+		{
+			"_links": 
+			{
+				"self": 
+				{
+					"href": "http://api.football-data.org/v1/teams/25"
+				},
+
+				"fixtures": 
+				{
+					"href": "http://api.football-data.org/v1/teams/25/fixtures"
+				},
+
+				"players": 
+				{
+					"href": "http://api.football-data.org/v1/teams/25/players"
+				}
+			},
+
+			"name": "MSV Duisburg",
+			"code": null,
+			"shortName": "Duisburg",
+			"squadMarketValue": "14,100,000 €",
+			"crestUrl": "http://upload.wikimedia.org/wikipedia/de/3/38/Msv_duisburg(neu).svg"
+		},
+
+		{
+			"_links": 
+			{
+				"self": 
+				{
+					"href": "http://api.football-data.org/v1/teams/13"
+				},
+
+				"fixtures": 
+				{
+					"href": "http://api.football-data.org/v1/teams/13/fixtures"
+				},
+
+				"players": 
+				{
+					"href": "http://api.football-data.org/v1/teams/13/players"
+				}
+			},
+
+			"name": "1. FC Kaiserslautern",
+			"code": "FCK",
+			"shortName": "K'lautern",
+			"squadMarketValue": "19,225,000 €",
+			"crestUrl": "http://upload.wikimedia.org/wikipedia/commons/d/d3/Logo_1_FC_Kaiserslautern.svg"
+		},
+
+		{
+			"_links": 
+			{
+				"self": 
+				{
+					"href": "http://api.football-data.org/v1/teams/33"
+				},
+
+				"fixtures": 
+				{
+					"href": "http://api.football-data.org/v1/teams/33/fixtures"
+				},
+
+				"players": 
+				{
+					"href": "http://api.football-data.org/v1/teams/33/players"
+				}
+			},
+
+			"name": "Eintracht Braunschweig",
+			"code": "EBS",
+			"shortName": "Braunschweig",
+			"squadMarketValue": "14,450,000 €",
+			"crestUrl": "http://upload.wikimedia.org/wikipedia/de/4/45/Logo_Eintracht_Braunschweig.svg"
+		},
+
+		{
+			"_links": 
+			{
+				"self": 
+				{
+					"href": "http://api.football-data.org/v1/teams/46"
+				},
+
+				"fixtures": 
+				{
+					"href": "http://api.football-data.org/v1/teams/46/fixtures"
+				},
+
+				"players": 
+				{
+					"href": "http://api.football-data.org/v1/teams/46/players"
+				}
+			},
+
+			"name": "SV Sandhausen",
+			"code": "SVS",
+			"shortName": "Sandhausen",
+			"squadMarketValue": "12,400,000 €",
+			"crestUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d3/SV_Sandhausen.svg"
+		},
+
+		{
+			"_links": 
+			{
+				"self": 
+				{
+					"href": "http://api.football-data.org/v1/teams/17"
+				},
+
+				"fixtures": 
+				{
+					"href": "http://api.football-data.org/v1/teams/17/fixtures"
+				},
+
+				"players": 
+				{
+					"href": "http://api.football-data.org/v1/teams/17/players"
+				}
+			},
+
+			"name": "SC Freiburg",
+			"code": "SCF",
+			"shortName": "Freiburg",
+			"squadMarketValue": "30,775,000 €",
+			"crestUrl": "http://upload.wikimedia.org/wikipedia/de/f/f1/SC-Freiburg_Logo-neu.svg"
+		},
+
+		{
+			"_links": 
+			{
+				"self": 
+				{
+					"href": "http://api.football-data.org/v1/teams/14"
+				},
+
+				"fixtures": 
+				{
+					"href": "http://api.football-data.org/v1/teams/14/fixtures"
+				},
+
+				"players": 
+				{
+					"href": "http://api.football-data.org/v1/teams/14/players"
+				}
+			},
+
+			"name": "1. FC Nürnberg",
+			"code": "FCN",
+			"shortName": "Nürnberg",
+			"squadMarketValue": "18,200,000 €",
+			"crestUrl": "http://upload.wikimedia.org/wikipedia/commons/f/fa/1._FC_Nürnberg_logo.svg"
+		},
+
+		{
+			"_links": 
+			{
+				"self": 
+				{
+					"href": "http://api.football-data.org/v1/teams/30"
+				},
+
+				"fixtures": 
+				{
+					"href": "http://api.football-data.org/v1/teams/30/fixtures"
+				},
+
+				"players": 
+				{
+					"href": "http://api.football-data.org/v1/teams/30/players"
+				}
+			},
+
+			"name": "FSV Frankfurt",
+			"code": "FSV",
+			"shortName": "FSV",
+			"squadMarketValue": "13,700,000 €",
+			"crestUrl": "http://upload.wikimedia.org/wikipedia/de/c/ce/FSV_Frankfurt_1899.svg"
+		},
+
+		{
+			"_links": 
+			{
+				"self": 
+				{
+					"href": "http://api.football-data.org/v1/teams/721"
+				},
+
+				"fixtures": 
+				{
+					"href": "http://api.football-data.org/v1/teams/721/fixtures"
+				},
+
+				"players": 
+				{
+					"href": "http://api.football-data.org/v1/teams/721/players"
+				}
+			},
+
+			"name": "Red Bull Leipzig",
+			"code": "RBL",
+			"shortName": "RB Leipzig",
+			"squadMarketValue": "38,750,000 €",
+			"crestUrl": "http://upload.wikimedia.org/wikipedia/de/d/d4/RB_Leipzig_2010_logo.svg"
+		},
+
+		{
+			"_links": 
+			{
+				"self": 
+				{
+					"href": "http://api.football-data.org/v1/teams/21"
+				},
+
+				"fixtures": 
+				{
+					"href": "http://api.football-data.org/v1/teams/21/fixtures"
+				},
+
+				"players": 
+				{
+					"href": "http://api.football-data.org/v1/teams/21/players"
+				}
+			},
+
+			"name": "SpVgg Greuther Fürth",
+			"code": "GRE",
+			"shortName": "Fürth",
+			"squadMarketValue": "15,575,000 €",
+			"crestUrl": "http://upload.wikimedia.org/wikipedia/de/6/6d/SpVgg_Greuther_Fürth_logo.svg"
+		},
+
+		{
+			"_links": 
+			{
+				"self": 
+				{
+					"href": "http://api.football-data.org/v1/teams/32"
+				},
+
+				"fixtures": 
+				{
+					"href": "http://api.football-data.org/v1/teams/32/fixtures"
+				},
+
+				"players": 
+				{
+					"href": "http://api.football-data.org/v1/teams/32/players"
+				}
+			},
+
+			"name": "Karlsruher SC",
+			"code": "KAR",
+			"shortName": "Karlsruhe",
+			"squadMarketValue": "15,450,000 €",
+			"crestUrl": "http://upload.wikimedia.org/wikipedia/de/a/a8/Karlsruher_SC_Logo.svg"
+		},
+
+		{
+			"_links": 
+			{
+				"self": 
+				{
+					"href": "http://api.football-data.org/v1/teams/44"
+				},
+
+				"fixtures": 
+				{
+					"href": "http://api.football-data.org/v1/teams/44/fixtures"
+				},
+
+				"players": 
+				{
+					"href": "http://api.football-data.org/v1/teams/44/players"
+				}
+			},
+
+			"name": "1. FC Heidenheim 1846",
+			"code": "HEI",
+			"shortName": "Heidenheim",
+			"squadMarketValue": "11,550,000 €",
+			"crestUrl": "http://upload.wikimedia.org/wikipedia/commons/9/9d/1._FC_Heidenheim_1846.svg"
+		},
+
+		{
+			"_links": 
+			{
+				"self": 
+				{
+					"href": "http://api.football-data.org/v1/teams/26"
+				},
+
+				"fixtures": 
+				{
+					"href": "http://api.football-data.org/v1/teams/26/fixtures"
+				},
+
+				"players": 
+				{
+					"href": "http://api.football-data.org/v1/teams/26/players"
+				}
+			},
+
+			"name": "TSV 1860 München",
+			"code": "1860",
+			"shortName": "1860 München",
+			"squadMarketValue": "16,825,000 €",
+			"crestUrl": "http://upload.wikimedia.org/wikipedia/commons/4/48/TSV_1860_München.svg"
+		},
+
+		{
+			"_links": 
+			{
+				"self": 
+				{
+					"href": "http://api.football-data.org/v1/teams/29"
+				},
+
+				"fixtures": 
+				{
+					"href": "http://api.football-data.org/v1/teams/29/fixtures"
+				},
+
+				"players": 
+				{
+					"href": "http://api.football-data.org/v1/teams/29/players"
+				}
+			},
+
+			"name": "SC Paderborn 07",
+			"code": "SCP",
+			"shortName": "Paderborn",
+			"squadMarketValue": "17,600,000 €",
+			"crestUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e3/SC_Paderborn_07_Logo.svg"
+		},
+
+		{
+			"_links": 
+			{
+				"self": 
+				{
+					"href": "http://api.football-data.org/v1/teams/36"
+				},
+
+				"fixtures": 
+				{
+					"href": "http://api.football-data.org/v1/teams/36/fixtures"
+				},
+
+				"players": 
+				{
+					"href": "http://api.football-data.org/v1/teams/36/players"
+				}
+			},
+
+			"name": "VfL Bochum",
+			"code": "VFL",
+			"shortName": "Bochum",
+			"squadMarketValue": "14,750,000 €",
+			"crestUrl": "https://upload.wikimedia.org/wikipedia/commons/7/72/VfL_Bochum_logo.svg"
+		},
+
+		{
+			"_links": 
+			{
+				"self": 
+				{
+					"href": "http://api.football-data.org/v1/teams/20"
+				},
+
+				"fixtures": 
+				{
+					"href": "http://api.football-data.org/v1/teams/20/fixtures"
+				},
+
+				"players": 
+				{
+					"href": "http://api.football-data.org/v1/teams/20/players"
+				}
+			},
+
+			"name": "FC St. Pauli",
+			"code": "FCP",
+			"shortName": "Pauli",
+			"squadMarketValue": "14,650,000 €",
+			"crestUrl": "http://upload.wikimedia.org/wikipedia/de/2/2f/Logo_FC_St_Pauli.svg"
+		},
+
+		{
+			"_links": 
+			{
+				"self": 
+				{
+					"href": "http://api.football-data.org/v1/teams/38"
+				},
+
+				"fixtures": 
+				{
+					"href": "http://api.football-data.org/v1/teams/38/fixtures"
+				},
+
+				"players": 
+				{
+					"href": "http://api.football-data.org/v1/teams/38/players"
+				}
+			},
+
+			"name": "Arminia Bielefeld",
+			"code": null,
+			"shortName": "Bielefeld",
+			"squadMarketValue": "13,000,000 €",
+			"crestUrl": "http://upload.wikimedia.org/wikipedia/de/e/e5/Logo_Arminia_Bielefeld.svg"
+		},
+
+		{
+			"_links": 
+			{
+				"self": 
+				{
+					"href": "http://api.football-data.org/v1/teams/28"
+				},
+
+				"fixtures": 
+				{
+					"href": "http://api.football-data.org/v1/teams/28/fixtures"
+				},
+
+				"players": 
+				{
+					"href": "http://api.football-data.org/v1/teams/28/players"
+				}
+			},
+
+			"name": "1. FC Union Berlin",
+			"code": "FCU",
+			"shortName": "Union",
+			"squadMarketValue": "18,950,000 €",
+			"crestUrl": "http://upload.wikimedia.org/wikipedia/de/e/e4/1._FC_Union_Berlin.svg"
+		},
+
+		{
+			"_links": 
+			{
+				"self": 
+				{
+					"href": "http://api.football-data.org/v1/teams/24"
+				},
+
+				"fixtures": 
+				{
+					"href": "http://api.football-data.org/v1/teams/24/fixtures"
+				},
+
+				"players": 
+				{
+					"href": "http://api.football-data.org/v1/teams/24/players"
+				}
+			},
+
+			"name": "Fortuna Düsseldorf",
+			"code": "FOR",
+			"shortName": "Düsseldorf",
+			"squadMarketValue": "18,350,000 €",
+			"crestUrl": "http://upload.wikimedia.org/wikipedia/commons/9/94/Fortuna_Düsseldorf.svg"
+		}
+	]
+}
