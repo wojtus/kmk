@@ -5,11 +5,11 @@ import org.apache.commons.math3.ml.clustering.Clusterable;
 import spectrum.kmk.liga.Fixture;
 import spectrum.kmk.liga.Team;
 
-class FixtureClusterDto implements Clusterable {
+public class FixtureClusterable implements Clusterable {
 
 	private final Fixture fixture;
 
-	FixtureClusterDto(final Fixture fixture) {
+	FixtureClusterable(final Fixture fixture) {
 		this.fixture = fixture;
 	}
 

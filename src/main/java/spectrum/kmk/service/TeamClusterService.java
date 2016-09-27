@@ -8,6 +8,7 @@ import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import spectrum.kmk.cluster.TeamClusterable;
 import spectrum.kmk.liga.Team;
 import spectrum.kmk.persistence.TeamBo;
 import spectrum.kmk.persistence.TeamRepository;
@@ -17,10 +18,10 @@ class TeamClusterService {
 
 	private final PersistenceToLiga persistenceToLiga = new PersistenceToLiga();
 	private final TeamRepository teamRepository;
-	final Clusterer<Team> teamClusterer;
+	final Clusterer<Team, TeamClusterable> teamClusterer;
 
 	@Autowired
-	TeamClusterService(final TeamRepository teamRepository, final Clusterer<Team> teamClusterer) {
+	TeamClusterService(final TeamRepository teamRepository, final Clusterer<Team, TeamClusterable> teamClusterer) {
 		this.teamRepository = teamRepository;
 		this.teamClusterer = teamClusterer;
 	}

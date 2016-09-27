@@ -4,11 +4,11 @@ import org.apache.commons.math3.ml.clustering.Clusterable;
 
 import spectrum.kmk.liga.Team;
 
-class TeamCluster implements Clusterable {
+public class TeamClusterable implements Clusterable {
 
 	private final Team team;
 
-	TeamCluster(final Team team) {
+	TeamClusterable(final Team team) {
 		this.team = team;
 	}
 

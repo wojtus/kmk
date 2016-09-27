@@ -1,7 +1,13 @@
 package spectrum.kmk.service;
 
 import java.util.Collection;
+import java.util.List;
 
-public interface Clusterer<T> {
-	void clusterize(final Collection<T> ligaDtos);
+import org.apache.commons.math3.ml.clustering.CentroidCluster;
+import org.apache.commons.math3.ml.clustering.Clusterable;
+
+import spectrum.kmk.cluster.BusinessClusterable;
+
+public interface Clusterer<INPUT, OUTPUT extends Clusterable> {
+	List<CentroidCluster<BusinessClusterable<OUTPUT>>> clusterize(final Collection<INPUT> ligaDtos);
 }
