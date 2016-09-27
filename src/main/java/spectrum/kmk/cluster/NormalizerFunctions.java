@@ -11,7 +11,7 @@ import java.util.stream.Stream;
 import org.apache.commons.math3.ml.clustering.Clusterable;
 import org.apache.commons.math3.ml.clustering.DoublePoint;
 
-public class NormalizerFunctions {
+class NormalizerFunctions {
 	List<Normalizer<Double>> createNormaliserList(final Collection<? extends Clusterable> input,
 			final Integer dimencionsCount) {
 		final List<Normalizer<Double>> normalizerList = new ArrayList<>();

@@ -5,7 +5,7 @@ import spectrum.kmk.liga.Team;
 import spectrum.kmk.persistence.FixtureBo;
 import spectrum.kmk.persistence.TeamBo;
 
-public class PersistenceToLiga {
+class PersistenceToLiga {
 
 	Fixture createFixture(final FixtureBo bo) {
 		final Team home = createTeam(bo.getHome());

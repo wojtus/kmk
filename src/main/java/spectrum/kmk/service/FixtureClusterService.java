@@ -10,13 +10,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import spectrum.kmk.cluster.BusinessClusterable;
+import spectrum.kmk.cluster.Clusterer;
 import spectrum.kmk.cluster.FixtureClusterable;
 import spectrum.kmk.liga.Fixture;
 import spectrum.kmk.persistence.FixtureBo;
 import spectrum.kmk.persistence.FixtureRepository;
 
 @Service
-class FixtureClusterService {
+class FixtureClusterService implements ClusterService<FixtureClusterable> {
 
 	private final PersistenceToLiga persistenceToLiga = new PersistenceToLiga();
 	private final FixtureRepository fixtureRepository;
@@ -29,7 +30,8 @@ class FixtureClusterService {
 		this.fixtureClusterer = fixtureClusterer;
 	}
 
-	List<CentroidCluster<BusinessClusterable<FixtureClusterable>>> clusterTeams() {
+	@Override
+	public List<CentroidCluster<BusinessClusterable<FixtureClusterable>>> clusterObjects() {
 		final List<FixtureBo> teams = new LinkedList<>();
 
 		fixtureRepository.findAll().forEach(teams::add);

@@ -6,7 +6,7 @@ import spectrum.kmk.liga.Team;
 import spectrum.kmk.source.SMVParser;
 import spectrum.kmk.source.TeamImportDto;
 
-public class TeamFactory {
+class TeamFactory {
 
 	private final Function<String, Long> smvParser = new SMVParser();
 

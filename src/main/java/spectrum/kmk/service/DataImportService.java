@@ -1,6 +1,7 @@
 package spectrum.kmk.service;
 
 import java.util.Collection;
+import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.Executor;
 import java.util.function.Consumer;
@@ -36,8 +37,8 @@ public class DataImportService {
 		this.fixtureRepository = fixtureRepository;
 	}
 
-	void importData(final Supplier<Collection<TeamImportDto>> teams,
-			final Supplier<Collection<FixtureImportDto>> fixtures) throws Exception {
+	public void importData(final Supplier<List<TeamImportDto>> teams, final Supplier<List<FixtureImportDto>> fixtures)
+			throws Exception {
 		final Consumer<Collection<TeamImportDto>> importEachTeam = teamDtos -> teamDtos.forEach(this::importTeam);
 		final Consumer<Collection<FixtureImportDto>> importEachFixture = fixtureDtos -> fixtureDtos
 				.forEach(this::importFixture);

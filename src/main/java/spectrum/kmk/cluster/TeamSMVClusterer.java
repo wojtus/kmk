@@ -10,7 +10,6 @@ import org.apache.commons.math3.ml.clustering.MultiKMeansPlusPlusClusterer;
 import org.springframework.stereotype.Component;
 
 import spectrum.kmk.liga.Team;
-import spectrum.kmk.service.Clusterer;
 
 @Component
 class TeamSMVClusterer implements Clusterer<Team, TeamClusterable> {

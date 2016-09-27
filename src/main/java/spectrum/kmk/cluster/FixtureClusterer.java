@@ -11,7 +11,6 @@ import org.apache.commons.math3.ml.clustering.MultiKMeansPlusPlusClusterer;
 import org.springframework.stereotype.Component;
 
 import spectrum.kmk.liga.Fixture;
-import spectrum.kmk.service.Clusterer;
 
 @Component
 class FixtureClusterer implements Clusterer<Fixture, FixtureClusterable> {

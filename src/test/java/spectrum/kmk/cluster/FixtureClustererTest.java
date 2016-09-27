@@ -10,7 +10,6 @@ import org.junit.Test;
 
 import spectrum.kmk.liga.Fixture;
 import spectrum.kmk.liga.Team;
-import spectrum.kmk.service.Clusterer;
 
 public class FixtureClustererTest {
 	@Test
