@@ -42,7 +42,7 @@ public class Application {
 	@Bean
 	public Executor threadPoolTaskExecutor() {
 		final ThreadPoolTaskExecutor threadPoolTaskExecutor = new ThreadPoolTaskExecutor();
-		threadPoolTaskExecutor.setCorePoolSize(6);
+		threadPoolTaskExecutor.setCorePoolSize(2);
 		return threadPoolTaskExecutor;
 	}
 

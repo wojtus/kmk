@@ -6,24 +6,28 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 import org.apache.commons.math3.ml.clustering.Clusterable;
 import org.apache.commons.math3.ml.clustering.DoublePoint;
 
 class NormalizerFunctions {
+
 	List<Normalizer<Double>> createNormaliserList(final Collection<? extends Clusterable> input,
 			final Integer dimencionsCount) {
-		final List<Normalizer<Double>> normalizerList = new ArrayList<>();
 
-		for (int i = 0; i < dimencionsCount; i++) {
-
+		final Function<Integer, Normalizer<Double>> getNormalizer = (i) -> {
 			final Double min = getMinForDimension(i, input.stream());
 			final Double max = getMaxForDimension(i, input.stream());
 			final Normalizer<Double> normalizer = new Normalizer<>(min, max, 1d);
-			normalizerList.add(normalizer);
+			return normalizer;
+		};
 
-		}
+		final List<Normalizer<Double>> normalizerList = IntStream.range(0, dimencionsCount).boxed().//
+				map(getNormalizer).collect(Collectors.toList());
 		return normalizerList;
 	}
 
