@@ -4,6 +4,14 @@ import java.util.List;
 
 class Liga {
 
-	List<Matchday> matchdays;
+	private final List<Matchday> matchdays;
+
+	Liga(final List<Matchday> matchdays) {
+		this.matchdays = matchdays;
+	}
+
+	public List<Matchday> getMatchdays() {
+		return matchdays;
+	}
 
 }

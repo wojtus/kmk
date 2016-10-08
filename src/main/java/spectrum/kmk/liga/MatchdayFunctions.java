@@ -2,17 +2,19 @@ package spectrum.kmk.liga;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 class MatchdayFunctions {
 
-	List<FixtureTeamResult> calculateResult(final List<Fixture> fixtures) {
+	List<FixtureTeamResult> calculateResult(final Matchday matchday) {
+		final List<Fixture> fixtures = matchday.getFixtures();
 		final Stream<Team> awayTeams = fixtures.stream().map(Fixture::getAway);
 		final Stream<Team> homeTeams = fixtures.stream().map(Fixture::getHome);
 		final Stream<Team> teams = Stream.concat(awayTeams, homeTeams);
 
-		final List<FixtureTeamResult> entries = teams.map(team -> this.createTableEntry(fixtures, team)).//
+		final List<FixtureTeamResult> entries = teams.map(team -> createFixtureTeamResult(fixtures, team)).//
 				collect(Collectors.toList());
 
 		return entries;
@@ -21,9 +23,8 @@ class MatchdayFunctions {
 
 	Fixture findPlayedFixture(final List<Fixture> fixtures, final Team team) {
 
-		final Optional<Fixture> fixture = fixtures.stream()
-				.filter(f -> f.getHome().equals(team) || f.getAway().equals(team)).findAny();
-
+		final Predicate<? super Fixture> isRelevantTeam = f -> f.getHome().equals(team) || f.getAway().equals(team);
+		final Optional<Fixture> fixture = fixtures.stream().filter(isRelevantTeam).findAny();
 		return fixture.orElseThrow(() -> new IllegalStateException("Team spielt nicht"));
 	}
 
@@ -57,7 +58,7 @@ class MatchdayFunctions {
 		return fixture != null && fixture.getHome().equals(team);
 	}
 
-	private FixtureTeamResult createTableEntry(final List<Fixture> fixtures, final Team team) {
+	private FixtureTeamResult createFixtureTeamResult(final List<Fixture> fixtures, final Team team) {
 		final Fixture f = findPlayedFixture(fixtures, team);
 		final Integer goalsShot = getGoalsShot(f, team);
 		final Integer goalsLost = getGoalsLost(f, team);

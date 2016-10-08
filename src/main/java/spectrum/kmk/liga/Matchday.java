@@ -4,6 +4,13 @@ import java.util.List;
 
 class Matchday {
 
-	List<Fixture> fixtures;
+	private final List<Fixture> fixtures;
 
+	Matchday(final List<Fixture> fixtures) {
+		this.fixtures = fixtures;
+	}
+
+	public List<Fixture> getFixtures() {
+		return fixtures;
+	}
 }

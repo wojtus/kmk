@@ -10,10 +10,6 @@ import org.junit.Test;
 public class MatchdayFunctionsTest {
 	MatchdayFunctions matchdayFunctions = new MatchdayFunctions();
 
-	private Fixture createTestFixture(final Team home, final Team away, final int goalsHome, final int goalsAway) {
-		return new Fixture(home, away, goalsHome, goalsAway);
-	}
-
 	@Test
 	public void testCalculateResult() throws Exception {
 		final Team homeFixture1 = new Team("TEAM_NAME_HF1", Long.valueOf(10));
@@ -25,7 +21,8 @@ public class MatchdayFunctionsTest {
 		final Fixture fixture1 = createTestFixture(homeFixture1, awayFixture1, goalsHome, goalsAway);
 		final Fixture fixture2 = createTestFixture(homeFixture2, awayFixture2, goalsHome, goalsAway);
 		final List<Fixture> fixtures = Arrays.asList(fixture1, fixture2);
-		final List<FixtureTeamResult> result = matchdayFunctions.calculateResult(fixtures);
+		final Matchday matchday = new Matchday(fixtures);
+		final List<FixtureTeamResult> result = matchdayFunctions.calculateResult(matchday);
 
 		final Optional<FixtureTeamResult> homeFixture1Entry = result.stream().//
 				filter(e -> e.getTeam().equals(homeFixture1)).findAny();
@@ -102,6 +99,10 @@ public class MatchdayFunctionsTest {
 
 		Assert.assertFalse(matchdayFunctions.isAwayTeam(fixture, home));
 		Assert.assertTrue(matchdayFunctions.isHomeTeam(fixture, home));
+	}
+
+	private Fixture createTestFixture(final Team home, final Team away, final int goalsHome, final int goalsAway) {
+		return new Fixture(home, away, goalsHome, goalsAway);
 	}
 
 }
